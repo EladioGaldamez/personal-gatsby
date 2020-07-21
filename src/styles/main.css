@@ -1,0 +1,41 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-nunito;
+  @apply bg-tuna;
+}
+
+.w-line::before {
+  content: "";
+  width: 2em;
+  border-bottom: 2px solid #FFAF29;
+  border-radius: 2em;
+  margin-right: 1em;
+}
+
+.active-link {
+  position: relative;
+  color: #ffffff !important;
+}
+
+@media only screen and (min-width: 991px) {
+  .active-link::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #FFAF29;
+    border-radius: 2em;
+    width: 50%;
+    height: 2px;
+    bottom: -6px;
+    left: calc(50%);
+    transform: translateX(-50%);
+  }
+}

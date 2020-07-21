@@ -1,0 +1,104 @@
+import React from "react"
+import { graphql } from "gatsby"
+import OptimizedImage from "gatsby-image/withIEPolyfill"
+import Layout from "../components/layout"
+import Google from "../components/logos/google"
+import Barbless from "../components/logos/barbless"
+import Namecheap from "../components/logos/namecheap"
+import Studio31 from "../components/logos/studio31"
+import RecorridoAntigua from "../components/logos/recorridoantigua"
+import Ninja from "../components/logos/ninja"
+
+export const pageQuery = graphql`
+  {
+    lulus: file(relativePath: { eq: "lulus.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    barblessPodcast: file(relativePath: { eq: "barbless-podcast.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    recorridoAntigua: file(relativePath: { eq: "recorrido-antigua.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+  }
+`
+
+const PortfolioPage = ({ data }) => {
+  const { lulus, barblessPodcast, recorridoAntigua } = data
+  const experience = (new Date().getFullYear()) - 2015
+
+  return <Layout>
+    <div className="container flex justify-between flex-wrap px-8 pt-4 md:p-12">
+      <div className="flex flex-col text-center md:text-left w-full md:w-1/3">
+        <h1 className="font-extrabold text-white text-4xl leading-none md:text-6xl">Portafolio</h1>
+      </div>
+    </div>
+    <div className="bg-tuna">
+      <div className="container flex flex-col px-8 md:px-12">
+        <div className="flex flex-wrap align-top w-full my-4 md:my-8">
+          <OptimizedImage className="w-full md:w-1/2" fluid={lulus.sharp.fluid} alt="Lulus blog" fadeIn={true} objectFit="contain" objectPosition="50% 50%" />
+
+          <div className="w-full md:w-1/2 p-4 md:p-16">
+            <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">Blog</span>
+            <h1 className="font-bold text-white text-2xl leading-none md:text-4xl mt-4">Lulus</h1>
+            <p className="text-suit text-base md:text-xl leading-none mt-4">
+              El blog de Lulus fue desarrollado para wordpress, utilizando CSS Grid y flexbox.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap align-top w-full my-4 md:my-8">
+          <OptimizedImage className="w-full md:w-1/2 order-1 md:order-2" fluid={barblessPodcast.sharp.fluid} alt="Barbless Podcast" fadeIn={true} objectFit="contain" objectPosition="50% 50%" />
+
+          <div className="w-full md:w-1/2 p-4 md:p-16  order-2 md:order-1 md:text-right">
+            <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line md:justify-end">Podcasting</span>
+            <h1 className="font-bold text-white text-2xl leading-none md:text-4xl mt-4">Barbless Podcast</h1>
+            <p className="text-suit text-base md:text-xl leading-none mt-4">
+              Barbless Podcast es una red de sitios de Wordpress, los cuales están enlazados con omnystudio, para generar los episodios.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap align-top w-full my-4 md:my-8">
+          <OptimizedImage className="w-full md:w-1/2" fluid={recorridoAntigua.sharp.fluid} alt="Recorrido Antigua app" fadeIn={true} objectFit="contain" objectPosition="50% 50%" />
+
+          <div className="w-full md:w-1/2 p-4 md:p-16">
+            <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">Aplicación</span>
+            <h1 className="font-bold text-white text-2xl leading-none md:text-4xl mt-4">Recorrido Antigua</h1>
+            <p className="text-suit text-base md:text-xl leading-none mt-4">
+              Recorrido Antigua fue un sitio desarrollado para los cursos de la Universidad. Este sitio es una plataforma para geolocalizar cada uno de los negocios de Antigua Guatemala.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="md:py-16 bg-rocks3">
+      <div className="container flex justify-between flex-wrap px-8 md:px-12">
+        <div className="flex flex-wrap items-center justify-between w-full">
+          <a href="https://apigee.com" target="_blank" rel="noreferrer" title="apigee"><Google className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
+          <a href="https://barbless.co" target="_blank" rel="noreferrer" title="barbless"><Barbless className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
+          {/* <a href="https://burbankitchen.com"  target="_blank"rel="noreferrer" title="Burban kitchen"><BurbanKitchen className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a> */}
+          <a href="https://teamninja.com" target="_blank" rel="noreferrer" title="team ninja"><Ninja className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
+          <a href="https://www.namecheap.com" target="_blank" rel="noreferrer" title="namecheap"><Namecheap className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
+          <a href="https://studio31.io" target="_blank" rel="noreferrer" title="studio 31"><Studio31 className="text-commet w-24 md:w-32 mx-2 md:mx-8 hover:text-white transition-all duration-200 ease-in-out" /></a>
+          <a href="https://recorridoantigua.com" target="_blank" rel="noreferrer" title="recorrido antigua"><RecorridoAntigua className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
+        </div>
+      </div>
+    </div>
+  </Layout>
+}
+
+export default PortfolioPage
