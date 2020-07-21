@@ -40,10 +40,18 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-purgecss',
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        tailwind: true,
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")]
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        develop: false,
+        tailwind: true,
+      },
+    },
   ],
 }
