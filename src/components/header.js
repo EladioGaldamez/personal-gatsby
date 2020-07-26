@@ -26,7 +26,7 @@ const Header = () => {
   })
 
   return (
-    <nav className={`flex items-center justify-between flex-wrap fixed w-full z-10 p-4 md:px-12 ${bgColor} ${isExpanded ? "shadow" : ""} transition-all duration-200 ease-in-out`} ref={navRef}>
+    <nav className={`flex items-center justify-between flex-wrap fixed w-full z-50 p-4 md:px-12 ${bgColor} ${isExpanded ? "shadow" : ""} transition-all duration-200 ease-in-out`} ref={navRef}>
       <Link className="text-5xl text-white" to="/" title="Main page">
         <span className="hidden">Is this a pineapple? Yes</span>
         <GiPineapple />
