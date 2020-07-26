@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import SEO from "../components/seo"
 import OptimizedImage from "gatsby-image/withIEPolyfill"
 import Layout from "../components/layout"
 
@@ -33,6 +34,10 @@ const ChallengesPage = ({ data }) => {
   const { discover, papaplaza, travel } = data
 
   return <Layout>
+    <SEO
+      title="Retos | Jos&eacute; Gald&aacute;mez"
+      description="Me encantan los retos, por eso me reto a mi mismo dandole vida a ideas propias o de diseñadores de todas partes del mundo"
+    />
     <div className="container flex justify-between flex-wrap px-8 pt-4 md:p-12">
       <div className="flex flex-col text-center md:text-left w-full md:w-1/3">
         <h1 className="font-extrabold text-white text-4xl leading-none md:text-6xl">Retos</h1>

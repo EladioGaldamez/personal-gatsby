@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import OptimizedImage from "gatsby-image/withIEPolyfill"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Google from "../components/logos/google"
 import Barbless from "../components/logos/barbless"
 import Namecheap from "../components/logos/namecheap"
@@ -37,9 +38,12 @@ export const pageQuery = graphql`
 
 const PortfolioPage = ({ data }) => {
   const { lulus, barblessPodcast, recorridoAntigua } = data
-  const experience = (new Date().getFullYear()) - 2015
 
   return <Layout>
+    <SEO
+      title="Portafolio | Jos&eacute; Gald&aacute;mez"
+      description="Dale un vistazo a los productos que he desarrollado."
+    />
     <div className="container flex justify-between flex-wrap px-8 pt-4 md:p-12">
       <div className="flex flex-col text-center md:text-left w-full md:w-1/3">
         <h1 className="font-extrabold text-white text-4xl leading-none md:text-6xl">Portafolio</h1>
@@ -88,13 +92,13 @@ const PortfolioPage = ({ data }) => {
     <div className="md:py-16 bg-rocks3">
       <div className="container flex justify-between flex-wrap px-8 md:px-12">
         <div className="flex flex-wrap items-center justify-between w-full">
-          <a href="https://apigee.com" target="_blank" rel="noreferrer" title="apigee"><Google className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
-          <a href="https://barbless.co" target="_blank" rel="noreferrer" title="barbless"><Barbless className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
+          <a href="https://apigee.com" target="_blank" rel="noreferrer" title="apigee"><span className="opacity-0">Apigee</span><Google className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
+          <a href="https://barbless.co" target="_blank" rel="noreferrer" title="barbless"><span className="opacity-0">Barbless.co</span><Barbless className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
           {/* <a href="https://burbankitchen.com"  target="_blank"rel="noreferrer" title="Burban kitchen"><BurbanKitchen className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a> */}
-          <a href="https://teamninja.com" target="_blank" rel="noreferrer" title="team ninja"><Ninja className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
-          <a href="https://www.namecheap.com" target="_blank" rel="noreferrer" title="namecheap"><Namecheap className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
-          <a href="https://studio31.io" target="_blank" rel="noreferrer" title="studio 31"><Studio31 className="text-commet w-24 md:w-32 mx-2 md:mx-8 hover:text-white transition-all duration-200 ease-in-out" /></a>
-          <a href="https://recorridoantigua.com" target="_blank" rel="noreferrer" title="recorrido antigua"><RecorridoAntigua className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
+          <a href="https://teamninja.com" target="_blank" rel="noreferrer" title="team ninja"><span className="opacity-0">Team ninja</span><Ninja className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
+          <a href="https://www.namecheap.com" target="_blank" rel="noreferrer" title="namecheap"><span className="opacity-0">Namecheap</span><Namecheap className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
+          <a href="https://studio31.io" target="_blank" rel="noreferrer" title="studio 31"><span className="opacity-0">Studio31</span><Studio31 className="text-commet w-24 md:w-32 mx-2 md:mx-8 hover:text-white transition-all duration-200 ease-in-out" /></a>
+          <a href="https://recorridoantigua.com" target="_blank" rel="noreferrer" title="recorrido antigua"><span className="opacity-0">Recorrido Antigua</span><RecorridoAntigua className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a>
         </div>
       </div>
     </div>

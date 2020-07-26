@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import { Link } from "gatsby"
+import { GiPineapple } from "react-icons/gi"
 import { useOnClickOutside } from "../utils"
 
 const Header = () => {
@@ -25,9 +26,10 @@ const Header = () => {
   })
 
   return (
-    <nav className={`flex items-center justify-between flex-wrap fixed w-full z-10 p-8 md:px-12 ${bgColor} ${isExpanded ? "shadow" : ""} transition-all duration-200 ease-in-out`} ref={navRef}>
-      <Link to="/">
-        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><text transform="translate(3 40)" fill="#fff" font-size="40" font-family="Sacramento-Regular, Sacramento"><tspan x="0" y="0">J</tspan></text></svg>
+    <nav className={`flex items-center justify-between flex-wrap fixed w-full z-10 p-4 md:px-12 ${bgColor} ${isExpanded ? "shadow" : ""} transition-all duration-200 ease-in-out`} ref={navRef}>
+      <Link className="text-5xl text-white" to="/" title="Main page">
+        <span className="hidden">Is this a pineapple? Yes</span>
+        <GiPineapple />
       </Link>
       <div className="block lg:hidden">
         <button className="flex items-center px-3 py-2 text-gray-500" onClick={() => toggleExpansion(!isExpanded)}>
@@ -41,13 +43,13 @@ const Header = () => {
       <div className={`w-full flex-grow lg:flex lg:items-center lg:w-auto pt-6 lg:pt-0 ${isExpanded ? "" : "hidden"}`}>
         <ul className="list-reset lg:flex justify-end flex-1 items-center font-bold">
           <li className="mr-3 py-4 md:py-0 px-2">
-            <Link className="nav-link text-commet text-sm hover:text-white" to="/portfolio" activeClassName="active-link">Portafolio</Link>
+            <Link className="nav-link text-suit text-sm hover:text-white" to="/portfolio" activeClassName="active-link">Portafolio</Link>
           </li>
           <li className="mr-3 py-4 md:py-0 px-2">
-            <Link className="nav-link text-commet text-sm hover:text-white" to="/challenges" activeClassName="active-link">Retos</Link>
+            <Link className="nav-link text-suit text-sm hover:text-white" to="/challenges" activeClassName="active-link">Retos</Link>
           </li>
           {/*<li className="mr-3 py-4 md:py-0 px-2">
-            <Link className="nav-link text-commet text-sm hover:text-white" to="/" activeClassName="active-link">Blog</Link>
+            <Link className="nav-link text-suit text-sm hover:text-white" to="/" activeClassName="active-link">Blog</Link>
           </li>*/}
         </ul>
       </div>
