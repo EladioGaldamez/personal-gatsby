@@ -3,7 +3,7 @@ import { FiHexagon, FiCircle, FiSquare, FiTriangle, FiActivity, FiStar } from "r
 import { GoZap } from "react-icons/go"
 
 const RandomIcons = () => {
-  return <div className="absolute inset-0 w-full h-full overflow-hidden">
+  return <div className="hidden md:block absolute inset-0 w-full h-full overflow-hidden">
     <FiHexagon className="absolute w-16 h-16 text-russian opacity-50 animate-float-y-reverse" style={{ top: "20%", left: "60%" }} />
     <FiCircle className="absolute w-16 h-16 text-russian opacity-50 animate-float-x-reverse" style={{ top: "68%", left: "8%" }} />
     <FiSquare className="absolute w-20 h-20 text-russian opacity-50 animate-float-x" style={{ top: "50%", left: "50%" }} />
