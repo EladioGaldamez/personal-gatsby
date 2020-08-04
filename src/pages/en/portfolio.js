@@ -1,14 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import OptimizedImage from "gatsby-image/withIEPolyfill"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Google from "../components/logos/google"
-import Barbless from "../components/logos/barbless"
-import Namecheap from "../components/logos/namecheap"
-import Studio31 from "../components/logos/studio31"
-import RecorridoAntigua from "../components/logos/recorridoantigua"
-import Ninja from "../components/logos/ninja"
+import Layout from "../../components/layoutEN"
+import SEO from "../../components/seo"
+import Google from "../../components/logos/google"
+import Barbless from "../../components/logos/barbless"
+import Namecheap from "../../components/logos/namecheap"
+import Studio31 from "../../components/logos/studio31"
+import RecorridoAntigua from "../../components/logos/recorridoantigua"
+import Ninja from "../../components/logos/ninja"
 
 export const pageQuery = graphql`
   {
@@ -42,13 +42,13 @@ const PortfolioPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Portafolio | Jos&eacute; Gald&aacute;mez"
-        description="Dale un vistazo a los productos que he desarrollado."
+        title="Portfolio | Jos&eacute; Gald&aacute;mez"
+        description="Take a look to the latest products developed from scratch."
       />
       <div className="container flex justify-between flex-wrap px-8 pt-4 md:p-12">
         <div className="flex flex-col text-center md:text-left w-full md:w-1/3">
-          <h1 className="font-extrabold text-white text-4xl leading-none md:text-6xl">
-            Portafolio
+          <h1 className="font-extrabold text-white text-4xl leading-tight md:text-6xl">
+            Portfolio
           </h1>
         </div>
       </div>
@@ -68,12 +68,11 @@ const PortfolioPage = ({ data }) => {
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">
                 Blog
               </span>
-              <h1 className="font-bold text-white text-2xl leading-none md:text-4xl mt-4">
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Lulus
               </h1>
-              <p className="text-suit text-base md:text-xl leading-none mt-4">
-                El blog de Lulus fue desarrollado para wordpress, utilizando CSS
-                Grid y flexbox.
+              <p className="text-suit text-base md:text-xl leading-tight mt-4">
+                The Lulus Blog was developer using Wordpress CMS.
               </p>
             </div>
           </div>
@@ -92,12 +91,14 @@ const PortfolioPage = ({ data }) => {
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line md:justify-end">
                 Podcasting
               </span>
-              <h1 className="font-bold text-white text-2xl leading-none md:text-4xl mt-4">
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Barbless Podcast
               </h1>
-              <p className="text-suit text-base md:text-xl leading-none mt-4">
-                Barbless Podcast es una red de sitios de Wordpress, los cuales
-                están enlazados con omnystudio, para generar los episodios.
+              <p className="text-suit text-base md:text-xl leading-tight mt-4">
+                Barbless Podcast is a Wordpress Multisite. It was developed to
+                help the Barbless.co to distribute their episodes. It is
+                connected to omnystudio to improve the UX while creating
+                episodes & posts.
               </p>
             </div>
           </div>
@@ -116,13 +117,14 @@ const PortfolioPage = ({ data }) => {
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">
                 Aplicación
               </span>
-              <h1 className="font-bold text-white text-2xl leading-none md:text-4xl mt-4">
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Recorrido Antigua
               </h1>
-              <p className="text-suit text-base md:text-xl leading-none mt-4">
-                Recorrido Antigua fue un sitio desarrollado para los cursos de
-                la Universidad. Este sitio es una plataforma para geolocalizar
-                cada uno de los negocios de Antigua Guatemala.
+              <p className="text-suit text-base md:text-xl leading-tight mt-4">
+                Recorrido Antigua was a Laravel project. It was created as a
+                University project. This site is a platform to locate all the
+                stores and places in Antigua Guatemala. It is currently
+                unavailable.
               </p>
             </div>
           </div>

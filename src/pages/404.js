@@ -14,7 +14,7 @@ const IndexPage = () => {
           <span className="font-semibold text-supernova text-xl mb-2 md:text-5xl">
             404
           </span>
-          <h1 className="font-extrabold text-white text-4xl leading-none md:text-6xl">
+          <h1 className="font-extrabold text-white text-4xl leading-tight md:text-6xl">
             P&aacute;gina no encontrada.
           </h1>
         </div>

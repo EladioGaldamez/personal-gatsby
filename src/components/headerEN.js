@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Pineapple from "../components/logos/pineapple"
 import { useOnClickOutside } from "../utils"
 
-const Header = () => {
+const EnglishHeader = () => {
   const [isExpanded, toggleExpansion] = useState(false)
   const [bgColor, setBackgroundColor] = useState("bg-tuna")
   const navRef = useRef()
@@ -32,8 +32,8 @@ const Header = () => {
       } transition-all duration-200 ease-in-out`}
       ref={navRef}
     >
-      <Link className="text-5xl text-white" to="/" title="Main page">
-        <span className="hidden">Es una piña con gafas? Sí!</span>
+      <Link className="text-5xl text-white" to="/en" title="Main page">
+        <span className="hidden">Is this a pineapple with glasses? Yes</span>
         <Pineapple className="h-12 md:w-10 md:h-20 animated-logo" />
       </Link>
       <div className="block lg:hidden">
@@ -61,29 +61,29 @@ const Header = () => {
           <li className="mr-3 py-4 md:py-0 px-2">
             <Link
               className="nav-link text-suit text-sm hover:text-white"
-              to="/portafolio"
+              to="/en/portfolio"
               activeClassName="active-link"
             >
-              Portafolio
+              Portfolio
             </Link>
           </li>
           <li className="mr-3 py-4 md:py-0 px-2">
             <Link
               className="nav-link text-suit text-sm hover:text-white"
-              to="/retos"
+              to="/en/challenges"
               activeClassName="active-link"
             >
-              Retos
+              Challenges
             </Link>
           </li>
           <li className="mr-3 py-4 md:py-0 px-2">
             <Link
               className="nav-link text-suit text-sm hover:text-white"
-              to="/en"
-              title="English"
+              to="/"
+              title="Español"
             >
-              <span role="img" aria-label="English">
-                🇺🇸
+              <span role="img" aria-label="Español">
+                🇬🇹
               </span>
             </Link>
           </li>
@@ -96,4 +96,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default EnglishHeader

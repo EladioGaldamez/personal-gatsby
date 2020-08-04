@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import SEO from "../components/seo"
+import SEO from "../../components/seo"
 import OptimizedImage from "gatsby-image/withIEPolyfill"
-import Layout from "../components/layout"
+import Layout from "../../components/layoutEN"
 
 export const pageQuery = graphql`
   {
@@ -36,13 +36,13 @@ const ChallengesPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Retos | Jos&eacute; Gald&aacute;mez"
-        description="Me encantan los retos, por eso me reto a mi mismo dandole vida a ideas propias o de diseñadores de todas partes del mundo"
+        title="Challenges | Jos&eacute; Gald&aacute;mez"
+        description="I like challenges. That's the reason to challenge myself giving life to own ideas or dribbble designs."
       />
       <div className="container flex justify-between flex-wrap px-8 pt-4 md:p-12">
         <div className="flex flex-col text-center md:text-left w-full md:w-1/3">
-          <h1 className="font-extrabold text-white text-4xl leading-none md:text-6xl">
-            Retos
+          <h1 className="font-extrabold text-white text-4xl leading-tight md:text-6xl">
+            Challenges
           </h1>
         </div>
       </div>
@@ -62,20 +62,20 @@ const ChallengesPage = ({ data }) => {
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">
                 HTML, CSS, JS
               </span>
-              <h1 className="font-bold text-white text-2xl leading-none md:text-4xl mt-4">
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Discover
               </h1>
-              <p className="text-suit text-base md:text-xl leading-none mt-4">
-                Este proyecto es un reto personal, el cual consiste en tomar un
-                diseño de dribbble y convertirlo en un markup de HTML. En este
-                caso, este proyecto fue tomado de un{" "}
+              <p className="text-suit text-base md:text-xl leading-tight mt-4">
+                This project is a personal challenge, which consists of
+                replicating a dribbble design and converting it into an HTML
+                markup. This project was take from a{" "}
                 <a
                   href="https://dribbble.com/shots/5260018-More-Holiday"
                   rel="referrer noopener"
                 >
-                  post de dribbble
+                  dribbble post
                 </a>
-                , utilizando fake data.
+                , using fake data.
               </p>
             </div>
           </div>
@@ -94,20 +94,20 @@ const ChallengesPage = ({ data }) => {
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line md:justify-end">
                 React JS
               </span>
-              <h1 className="font-bold text-white text-2xl leading-none md:text-4xl mt-4">
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Papaplaza Resto
               </h1>
-              <p className="text-suit text-base md:text-xl leading-none mt-4">
-                Este proyecto es un reto personal, el cual consiste en tomar un
-                diseño de dribbble y convertirlo en un markup de React JS. En
-                este caso, este proyecto fue tomado de un{" "}
+              <p className="text-suit text-base md:text-xl leading-tight mt-4">
+                This project is a personal challenge, which consists of
+                replicating a dribbble design and converting it into an HTML
+                markup.{" "}
                 <a
                   href="https://www.behance.net/gallery/90185469/Food-Website"
                   rel="referrer noopener"
                 >
-                  post de behance
+                  Behance post
                 </a>
-                , utilizando fake data.
+                , using fake data.
               </p>
             </div>
           </div>
@@ -124,22 +124,23 @@ const ChallengesPage = ({ data }) => {
 
             <div className="w-full md:w-1/2 p-4 md:p-16">
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">
-                React
+                ReactJS
               </span>
-              <h1 className="font-bold text-white text-2xl leading-none md:text-4xl mt-4">
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Travel Agency
               </h1>
-              <p className="text-suit text-base md:text-xl leading-none mt-4">
-                Este proyecto es un reto personal, el cual consiste en tomar un
-                diseño de dribbble y convertirlo en un markup de React JS. En
-                este caso, este proyecto fue tomado de un{" "}
+              <p className="text-suit text-base md:text-xl leading-tight mt-4">
+                This project is a personal challenge, which consists of
+                replicating a dribbble design and converting it into a reactJS
+                markup. In this case, this project was taken from an{" "}
                 <a
                   href="https://www.instagram.com/p/B6IY47tBnb8/"
                   rel="referrer noopener"
                 >
-                  post de instagram
+                  instagram post
                 </a>
-                , utilizando fake data.
+                , I have changed the content with fake information about my
+                country but with real images taken from unsplash.
               </p>
             </div>
           </div>

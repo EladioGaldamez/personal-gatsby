@@ -1,16 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
 import OptimizedImage from "gatsby-image/withIEPolyfill"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Google from "../components/logos/google"
-import Barbless from "../components/logos/barbless"
-import Namecheap from "../components/logos/namecheap"
-import Studio31 from "../components/logos/studio31"
-import RecorridoAntigua from "../components/logos/recorridoantigua"
-import Ninja from "../components/logos/ninja"
+import Layout from "../../components/layoutEN"
+import SEO from "../../components/seo"
+import Google from "../../components/logos/google"
+import Barbless from "../../components/logos/barbless"
+import Namecheap from "../../components/logos/namecheap"
+import Studio31 from "../../components/logos/studio31"
+import RecorridoAntigua from "../../components/logos/recorridoantigua"
+import Ninja from "../../components/logos/ninja"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
-import RandomIcons from "../components/randomIcons"
+import RandomIcons from "../../components/randomIcons"
 
 export const pageQuery = graphql`
   {
@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => {
       <div className="relative container flex justify-between flex-wrap px-8 pt-4 pb-24 md:py-16 md:px-12">
         <div className="z-10 flex flex-col text-center md:text-left w-full md:w-1/3">
           <span className="font-semibold text-supernova text-xl mb-2 md:text-5xl">
-            Hola, soy
+            Hello, I'm
           </span>
           <h1 className="font-extrabold text-white text-4xl leading-tight md:text-6xl">
             José <br />
@@ -82,15 +82,16 @@ const IndexPage = ({ data }) => {
         </div>
         <div className="z-10 flex flex-col justify-start md:justify-end w-full md:w-1/3 mt-16 md:mt-64">
           <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">
-            Acerca de mí
+            About me
           </span>
           <h1 className="font-extrabold text-white text-xl leading-tight md:text-4xl mt-4">
-            Desarrollador Web
+            Web developer
           </h1>
           <p className="text-suit text-base md:text-xl leading-tight mt-4">
-            Antig&uuml;e&ntilde;o, Desarrollador web y entusiata de la
-            tecnolog&iacute;a. Desarrollando productos que ayudan a resolver
-            problemas. Estudiante de <a href="https://platzi.com">Platzi</a>.
+            Antig&uuml;e&ntilde;o, Web developer, geek & tecky. I like to
+            develop products that help to solve problems.
+            <br />
+            Student at <a href="https://platzi.com">Platzi</a>
           </p>
         </div>
 
@@ -100,14 +101,14 @@ const IndexPage = ({ data }) => {
         <div className="container flex justify-between flex-wrap px-8 md:px-12">
           <div className="flex flex-col justify-start w-full md:w-1/3">
             <span className="flex items-center font-bold text-supernova text-sm md:text-base w-line">
-              Clientes
+              Clients
             </span>
             <h1 className="font-extrabold text-white text-xl leading-tight md:text-4xl mt-4">
-              Marcas con las que he trabajado
+              Brands I have worked with
             </h1>
             <p className="text-suit text-base md:text-xl leading-tight mt-4">
-              He trabajado con muchos clientes en Guatemala, El Salvador y
-              Estados Unidos.
+              I have worked with brands in Guatemala, El Salvador and United
+              States.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-between md:justify-end w-full md:w-2/3">
@@ -174,13 +175,13 @@ const IndexPage = ({ data }) => {
         <div className="container flex justify-between flex-wrap px-8 md:px-12">
           <div className="flex flex-col justify-start w-full md:w-1/2">
             <span className="flex items-center font-bold text-supernova text-sm md:text-base w-line">
-              Portafolio
+              Portfolio
             </span>
             <h1 className="font-extrabold text-white text-xl leading-tight md:text-4xl mt-4">
-              Los proyectos más representativos
+              The most impressive projects
             </h1>
             <p className="text-suit text-base md:text-xl leading-tight mt-4">
-              Estos son algunos de los proyectos que he desarrollado
+              These are some of the latest projects
             </p>
 
             <OptimizedImage
