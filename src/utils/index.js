@@ -1,10 +1,10 @@
-import { useEffect } from "react";
+import { useEffect } from "react"
 
 /**
  * Add a listener when is clicked outside an element
- * 
- * @param {*} ref 
- * @param {*} callback 
+ *
+ * @param {*} ref
+ * @param {*} callback
  */
 export const useOnClickOutside = (ref, callback) => {
   useEffect(() => {
@@ -14,14 +14,14 @@ export const useOnClickOutside = (ref, callback) => {
       }
 
       callback(event)
-    };
+    }
 
-    document.addEventListener('mousedown', listener);
-    document.addEventListener('touchstart', listener);
+    document.addEventListener("mousedown", listener)
+    document.addEventListener("touchstart", listener)
 
     return () => {
-      document.removeEventListener('mousedown', listener);
-      document.removeEventListener('touchstart', listener);
-    };
-  }, [ref, callback]);
+      document.removeEventListener("mousedown", listener)
+      document.removeEventListener("touchstart", listener)
+    }
+  }, [ref, callback])
 }

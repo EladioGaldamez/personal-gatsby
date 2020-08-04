@@ -68,6 +68,14 @@ body {
   animation-name: float-x-reverse;
 }
 
+.animated-logo {
+  transform-origin: top center;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-name: floating-logo;
+}
+
 
 @keyframes float-y {
 	0% {
@@ -114,5 +122,17 @@ body {
 	}
 	100% {
 		transform: translateX(20px);
+	}
+}
+
+@keyframes floating-logo {
+  0% {
+		transform: rotate(20deg);
+	}
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+		transform: rotate(20deg);
 	}
 }
