@@ -15,7 +15,7 @@ body {
 .w-line::before {
   content: "";
   width: 2em;
-  border-bottom: 2px solid #FFAF29;
+  border-bottom: 2px solid #ffaf29;
   border-radius: 2em;
   margin-right: 1em;
 }
@@ -25,12 +25,23 @@ body {
   color: #ffffff !important;
 }
 
+.circle-start {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  position: absolute;
+  left: -0.52rem;
+  top: 0;
+  border-radius: 1rem;
+  background: #a0aec0;
+}
+
 @media only screen and (min-width: 991px) {
   .active-link::after {
     content: "";
     position: absolute;
     display: block;
-    background-color: #FFAF29;
+    background-color: #ffaf29;
     border-radius: 2em;
     width: 50%;
     height: 2px;
@@ -76,63 +87,62 @@ body {
   animation-name: floating-logo;
 }
 
-
 @keyframes float-y {
-	0% {
-		transform: translateY(0px);
-	}
-	50% {
-		transform: translateY(-20px);
-	}
-	100% {
-		transform: translateY(0px);
-	}
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes float-y-reverse {
-	0% {
-		transform: translateY(20px);
-	}
-	50% {
-		transform: translateY(0px);
-	}
-	100% {
-		transform: translateY(20px);
-	}
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
 }
 
 @keyframes float-x {
-	0% {
-		transform: translateX(0px);
-	}
-	50% {
-		transform: translateX(20px);
-	}
-	100% {
-		transform: translateX(0px);
-	}
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 @keyframes float-x-reverse {
-	0% {
-		transform: translateX(20px);
-	}
-	50% {
-		transform: translateX(0px);
-	}
-	100% {
-		transform: translateX(20px);
-	}
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
 }
 
 @keyframes floating-logo {
   0% {
-		transform: rotate(20deg);
-	}
+    transform: rotate(20deg);
+  }
   50% {
     transform: rotate(-20deg);
   }
   100% {
-		transform: rotate(20deg);
-	}
+    transform: rotate(20deg);
+  }
 }

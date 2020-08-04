@@ -11,6 +11,7 @@ module.exports = {
         russian: "#1D1E28",
         commet: "#676975",
         suit: "#DEDEDE",
+        gainsboro: "#dcdcdc",
         supernova: "#FFAF29",
         zodiac: "#424657",
         rock3: "#252734",
