@@ -9,21 +9,21 @@ export const pageQuery = graphql`
     discover: file(relativePath: { eq: "discover.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: CENTER) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     papaplaza: file(relativePath: { eq: "papaplaza.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: CENTER) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     travel: file(relativePath: { eq: "travel.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: CENTER) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

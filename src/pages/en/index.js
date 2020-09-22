@@ -17,21 +17,21 @@ export const pageQuery = graphql`
     lulus: file(relativePath: { eq: "lulus.png" }) {
       sharp: childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     barblessPodcast: file(relativePath: { eq: "barbless-podcast.png" }) {
       sharp: childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     recorridoAntigua: file(relativePath: { eq: "recorrido-antigua.png" }) {
       sharp: childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -45,7 +45,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO
         title="Jos&eacute; Gald&aacute;mez"
-        description="Antig&uuml;e&ntilde;o, Desarrollador web, y entusiata de la tecnolog&iacute;a"
+        description="Antig&uuml;e&ntilde;o, Web developer, geek & tecky."
       />
       <div className="relative container flex justify-between flex-wrap px-8 pt-4 pb-24 md:py-16 md:px-12">
         <div className="z-10 flex flex-col text-center md:text-left w-full md:w-1/3">

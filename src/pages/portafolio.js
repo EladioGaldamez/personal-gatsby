@@ -15,21 +15,21 @@ export const pageQuery = graphql`
     lulus: file(relativePath: { eq: "lulus.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     barblessPodcast: file(relativePath: { eq: "barbless-podcast.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     recorridoAntigua: file(relativePath: { eq: "recorrido-antigua.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -71,10 +71,6 @@ const PortfolioPage = ({ data }) => {
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Lulus
               </h1>
-              <p className="text-suit text-base md:text-xl leading-tight mt-4">
-                El blog de Lulus fue desarrollado para wordpress, utilizando CSS
-                Grid y flexbox.
-              </p>
             </div>
           </div>
 
@@ -95,10 +91,6 @@ const PortfolioPage = ({ data }) => {
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Barbless Podcast
               </h1>
-              <p className="text-suit text-base md:text-xl leading-tight mt-4">
-                Barbless Podcast es una red de sitios de Wordpress, los cuales
-                están enlazados con omnystudio, para generar los episodios.
-              </p>
             </div>
           </div>
 
@@ -119,11 +111,6 @@ const PortfolioPage = ({ data }) => {
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Recorrido Antigua
               </h1>
-              <p className="text-suit text-base md:text-xl leading-tight mt-4">
-                Recorrido Antigua fue un sitio desarrollado para los cursos de
-                la Universidad. Este sitio es una plataforma para geolocalizar
-                cada uno de los negocios de Antigua Guatemala.
-              </p>
             </div>
           </div>
         </div>

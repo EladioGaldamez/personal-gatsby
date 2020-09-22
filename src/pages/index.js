@@ -17,21 +17,21 @@ export const pageQuery = graphql`
     lulus: file(relativePath: { eq: "lulus.png" }) {
       sharp: childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     barblessPodcast: file(relativePath: { eq: "barbless-podcast.png" }) {
       sharp: childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     recorridoAntigua: file(relativePath: { eq: "recorrido-antigua.png" }) {
       sharp: childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -88,7 +88,7 @@ const IndexPage = ({ data }) => {
             Desarrollador Web
           </h1>
           <p className="text-suit text-base md:text-xl leading-tight mt-4">
-            Antig&uuml;e&ntilde;o, Desarrollador web y entusiata de la
+            Antig&uuml;e&ntilde;o, Desarrollador web y entusiasta de la
             tecnolog&iacute;a. Desarrollando productos que ayudan a resolver
             problemas. Estudiante de <a href="https://platzi.com">Platzi</a>.
           </p>
@@ -106,7 +106,7 @@ const IndexPage = ({ data }) => {
               Marcas con las que he trabajado
             </h1>
             <p className="text-suit text-base md:text-xl leading-tight mt-4">
-              He trabajado con muchos clientes en Guatemala, El Salvador y
+              He trabajado con clientes en Guatemala, El Salvador y
               Estados Unidos.
             </p>
           </div>

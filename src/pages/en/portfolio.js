@@ -15,21 +15,21 @@ export const pageQuery = graphql`
     lulus: file(relativePath: { eq: "lulus.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     barblessPodcast: file(relativePath: { eq: "barbless-podcast.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     recorridoAntigua: file(relativePath: { eq: "recorrido-antigua.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -71,9 +71,6 @@ const PortfolioPage = ({ data }) => {
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Lulus
               </h1>
-              <p className="text-suit text-base md:text-xl leading-tight mt-4">
-                The Lulus Blog was developer using Wordpress CMS.
-              </p>
             </div>
           </div>
 
@@ -94,12 +91,6 @@ const PortfolioPage = ({ data }) => {
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Barbless Podcast
               </h1>
-              <p className="text-suit text-base md:text-xl leading-tight mt-4">
-                Barbless Podcast is a Wordpress Multisite. It was developed to
-                help the Barbless.co to distribute their episodes. It is
-                connected to omnystudio to improve the UX while creating
-                episodes & posts.
-              </p>
             </div>
           </div>
 
@@ -120,12 +111,6 @@ const PortfolioPage = ({ data }) => {
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Recorrido Antigua
               </h1>
-              <p className="text-suit text-base md:text-xl leading-tight mt-4">
-                Recorrido Antigua was a Laravel project. It was created as a
-                University project. This site is a platform to locate all the
-                stores and places in Antigua Guatemala. It is currently
-                unavailable.
-              </p>
             </div>
           </div>
         </div>

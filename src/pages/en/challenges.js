@@ -9,21 +9,21 @@ export const pageQuery = graphql`
     discover: file(relativePath: { eq: "discover.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: CENTER) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     papaplaza: file(relativePath: { eq: "papaplaza.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: CENTER) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     travel: file(relativePath: { eq: "travel.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: CENTER) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -68,7 +68,7 @@ const ChallengesPage = ({ data }) => {
               <p className="text-suit text-base md:text-xl leading-tight mt-4">
                 This project is a personal challenge, which consists of
                 replicating a dribbble design and converting it into an HTML
-                markup. This project was take from a{" "}
+                markup. This project was taken from a{" "}
                 <a
                   href="https://dribbble.com/shots/5260018-More-Holiday"
                   rel="referrer noopener"
@@ -98,9 +98,8 @@ const ChallengesPage = ({ data }) => {
                 Papaplaza Resto
               </h1>
               <p className="text-suit text-base md:text-xl leading-tight mt-4">
-                This project is a personal challenge, which consists of
-                replicating a dribbble design and converting it into an HTML
-                markup.{" "}
+                This project is a personal challenge, replicating a dribbble design and converting it into an HTML
+                markup. The idea was taken from a {" "}
                 <a
                   href="https://www.behance.net/gallery/90185469/Food-Website"
                   rel="referrer noopener"
@@ -130,8 +129,7 @@ const ChallengesPage = ({ data }) => {
                 Travel Agency
               </h1>
               <p className="text-suit text-base md:text-xl leading-tight mt-4">
-                This project is a personal challenge, which consists of
-                replicating a dribbble design and converting it into a reactJS
+                This project is a personal challenge, replicating a dribbble design and converting it into a reactJS
                 markup. In this case, this project was taken from an{" "}
                 <a
                   href="https://www.instagram.com/p/B6IY47tBnb8/"
