@@ -1,7 +1,9 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import OptimizedImage from "gatsby-image/withIEPolyfill"
+import SEO from "../components/seo"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
+import Platzi from "../components/logos/platzi"
 
 export const pageQuery = graphql`
   {
@@ -18,8 +20,12 @@ export const pageQuery = graphql`
 const CV = ({ data }) => {
   const { jose } = data
   return <>
-    <header className="mt-16 container flex flex-wrap items-center justify-center md:justify-between">
-      <div className="flex items-center justify-center">
+    <SEO
+      title="Curriculum Vitae | Jos&eacute; Gald&aacute;mez"
+      description="Antig&uuml;e&ntilde;o, Desarrollador web, y entusiata de la tecnolog&iacute;a"
+    />
+    <header className="mt-16 container flex flex-wrap items-center justify-center md:justify-start">
+      <div className="w-full md:w-1/3 flex items-center">
         <OptimizedImage
           className="rounded-full h-40 w-40 flex items-center justify-center"
           fluid={jose.sharp.fluid}
@@ -30,7 +36,7 @@ const CV = ({ data }) => {
         />
       </div>
 
-      <div className="flex flex-col text-center justify-center px-4">
+      <div className="w-full md:w-2/3 flex flex-col text-left px-4 md:pl-8">
         <h1 className="font-extrabold text-white text-4xl leading-tight md:text-6xl">José Galdámez</h1>
         <p className="font-semibold text-supernova text-xl mb-2 md:text-3xl">Desarrollador web</p>
       </div>
@@ -96,6 +102,17 @@ const CV = ({ data }) => {
               <td className="py-2 pl-4">
                 <a className="text-suit hover:text-white transition-all duration-200 ease-in-out" href="https://www.linkedin.com/in/josegaldámez" rel="noreferrer" target="_blank" title="linkedin:EladioGaldamez">
                   /josegaldámez
+                </a>
+              </td>
+            </tr>
+
+            <tr className="align-top">
+              <td className="py-2 pr-4">
+                <Platzi className="w-6 h-6 text-white" />
+              </td>
+              <td className="py-2 pl-4">
+                <a className="text-suit hover:text-white transition-all duration-200 ease-in-out" href="https://platzi.com/p/jgaldamez/" rel="noreferrer" target="_blank" title="platzi:jgaldamez">
+                  /jgaldamez
                 </a>
               </td>
             </tr>

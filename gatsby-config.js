@@ -29,13 +29,11 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-prefetch-google-fonts",
+      resolve: "gatsby-plugin-google-fonts",
       options: {
+        display: 'swap',
         fonts: [
-          {
-            family: "Nunito",
-            variants: ["400", "600", "700", "900"],
-          },
+          "Nunito:400,600,700,900"
         ],
       },
     },

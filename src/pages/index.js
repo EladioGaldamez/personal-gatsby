@@ -9,6 +9,7 @@ import Namecheap from "../components/logos/namecheap"
 import Studio31 from "../components/logos/studio31"
 import RecorridoAntigua from "../components/logos/recorridoantigua"
 import Ninja from "../components/logos/ninja"
+import Platzi from "../components/logos/platzi"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import RandomIcons from "../components/randomIcons"
 
@@ -69,7 +70,7 @@ const IndexPage = ({ data }) => {
               <FaGithub className="w-6 h-6 text-suit hover:text-white transition-all duration-200 ease-in-out" />
             </a>
             <a
-              className="mr-8"
+              className="mr-6"
               href="https://www.linkedin.com/in/josegaldámez"
               rel="noreferrer"
               target="_blank"
@@ -77,6 +78,16 @@ const IndexPage = ({ data }) => {
             >
               <span className="opacity-0">LinkedIn</span>
               <FaLinkedinIn className="w-6 h-6 text-suit hover:text-white transition-all duration-200 ease-in-out" />
+            </a>
+            <a
+              className="mr-8"
+              href="https://platzi.com/p/jgaldamez/"
+              rel="noreferrer"
+              target="_blank"
+              title="platzi:jgaldamez"
+            >
+              <span className="opacity-0">Platzi</span>
+              <Platzi className="w-6 h-6 text-suit hover:text-white transition-all duration-200 ease-in-out" />
             </a>
           </div>
         </div>
