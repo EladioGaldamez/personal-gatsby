@@ -17,7 +17,7 @@ import RandomIcons from "../../components/randomIcons"
 
 export const pageQuery = graphql`
   {
-    barblessPodcast: file(relativePath: { eq: "barbless-podcast.png" }) {
+    barbless: file(relativePath: { eq: "barbless.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 1280, maxWidth: 720, quality: 100, cropFocus: NORTH) {
           ...GatsbyImageSharpFluid_withWebp
@@ -42,7 +42,7 @@ export const pageQuery = graphql`
 `
 
 const IndexPage = ({ data }) => {
-  const { datastax, donordesk, barblessPodcast } = data
+  const { datastax, donordesk, barbless } = data
 
   return (
     <Layout>
@@ -133,7 +133,6 @@ const IndexPage = ({ data }) => {
               <span className="opacity-0">Barbless.co</span>
               <Barbless className="text-commet w-20 md:w-40 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" />
             </a>
-            {/* <a href="https://burbankitchen.com"  target="_blank"rel="noreferrer" title="Burban kitchen"><BurbanKitchen className="text-commet w-24 md:w-40 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a> */}
             <a
               href="https://teamninja.com"
               target="_blank"
@@ -227,8 +226,8 @@ const IndexPage = ({ data }) => {
           <div className="flex flex-col justify-start w-full md:w-1/2">
             <OptimizedImage
               className="mt-8 pl-0 md:pl-8 md:mt-16 w-full"
-              fluid={barblessPodcast.sharp.fluid}
-              alt="Barbless Podcast"
+              fluid={barbless.sharp.fluid}
+              alt="Barbless"
               fadeIn={true}
               objectFit="contain"
               objectPosition="50% 50%"

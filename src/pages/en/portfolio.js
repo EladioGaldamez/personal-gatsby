@@ -19,6 +19,13 @@ export const pageQuery = graphql`
         }
       }
     }
+    barbless: file(relativePath: { eq: "barbless.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     barblessPodcast: file(relativePath: { eq: "barbless-podcast.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
@@ -47,11 +54,34 @@ export const pageQuery = graphql`
         }
       }
     }
+    walnut: file(relativePath: { eq: "thewalnutbuilding.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    wewantyou: file(relativePath: { eq: "wewantyou.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `
 
 const PortfolioPage = ({ data }) => {
-  const { datastax, donordesk, lulus, barblessPodcast, recorridoAntigua } = data
+  const {
+    lulus,
+    barbless,
+    barblessPodcast,
+    recorridoAntigua,
+    datastax,
+    donordesk,
+    walnut,
+    wewantyou,
+  } = data
 
   return (
     <Layout>
@@ -91,8 +121,8 @@ const PortfolioPage = ({ data }) => {
           <div className="flex flex-wrap align-top w-full my-4 md:my-8">
             <OptimizedImage
               className="w-full md:w-1/2 order-1 md:order-2"
-              fluid={barblessPodcast.sharp.fluid}
-              alt="Barbless Podcast"
+              fluid={barbless.sharp.fluid}
+              alt="Barbless Website"
               fadeIn={true}
               objectFit="contain"
               objectPosition="50% 50%"
@@ -100,10 +130,10 @@ const PortfolioPage = ({ data }) => {
 
             <div className="w-full md:w-1/2 p-4 md:p-16  order-2 md:order-1 md:text-right">
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line md:justify-end">
-                Podcasting
+                Website
               </span>
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
-                Barbless Podcast
+                Barbless
               </h1>
             </div>
           </div>
@@ -111,8 +141,8 @@ const PortfolioPage = ({ data }) => {
           <div className="flex flex-wrap align-top w-full my-4 md:my-8">
             <OptimizedImage
               className="w-full md:w-1/2"
-              fluid={lulus.sharp.fluid}
-              alt="Lulus blog"
+              fluid={barblessPodcast.sharp.fluid}
+              alt="Barbless Podcast"
               fadeIn={true}
               objectFit="contain"
               objectPosition="50% 50%"
@@ -120,10 +150,10 @@ const PortfolioPage = ({ data }) => {
 
             <div className="w-full md:w-1/2 p-4 md:p-16">
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">
-                Blog
+                Podcasting
               </span>
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
-                Lulus
+                Barbless Podcast
               </h1>
             </div>
           </div>
@@ -151,6 +181,46 @@ const PortfolioPage = ({ data }) => {
           <div className="flex flex-wrap align-top w-full my-4 md:my-8">
             <OptimizedImage
               className="w-full md:w-1/2"
+              fluid={lulus.sharp.fluid}
+              alt="Lulus blog"
+              fadeIn={true}
+              objectFit="contain"
+              objectPosition="50% 50%"
+            />
+
+            <div className="w-full md:w-1/2 p-4 md:p-16">
+              <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">
+                Blog
+              </span>
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
+                Lulus
+              </h1>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap align-top w-full my-4 md:my-8">
+            <OptimizedImage
+              className="w-full md:w-1/2 order-1 md:order-2"
+              fluid={wewantyou.sharp.fluid}
+              alt="We Want You"
+              fadeIn={true}
+              objectFit="contain"
+              objectPosition="50% 50%"
+            />
+
+            <div className="w-full md:w-1/2 p-4 md:p-16  order-2 md:order-1 md:text-right">
+              <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line md:justify-end">
+                web Application
+              </span>
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
+                We Want You
+              </h1>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap align-top w-full my-4 md:my-8">
+            <OptimizedImage
+              className="w-full md:w-1/2"
               fluid={recorridoAntigua.sharp.fluid}
               alt="Recorrido Antigua app"
               fadeIn={true}
@@ -160,10 +230,30 @@ const PortfolioPage = ({ data }) => {
 
             <div className="w-full md:w-1/2 p-4 md:p-16">
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">
-                Aplicación
+                Application
               </span>
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Recorrido Antigua
+              </h1>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap align-top w-full my-4 md:my-8">
+            <OptimizedImage
+              className="w-full md:w-1/2 order-1 md:order-2"
+              fluid={walnut.sharp.fluid}
+              alt="The Walnut Building"
+              fadeIn={true}
+              objectFit="contain"
+              objectPosition="50% 50%"
+            />
+
+            <div className="w-full md:w-1/2 p-4 md:p-16  order-2 md:order-1 md:text-right">
+              <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line md:justify-end">
+                Website
+              </span>
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
+                The Walnut Building Website
               </h1>
             </div>
           </div>

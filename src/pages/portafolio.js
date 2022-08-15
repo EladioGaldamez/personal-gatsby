@@ -4,7 +4,7 @@ import OptimizedImage from "gatsby-image/withIEPolyfill"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Google from "../components/logos/google"
-import Barbless from "../components/logos/barbless"
+import Barblesslogo from "../components/logos/barbless"
 import Namecheap from "../components/logos/namecheap"
 import Studio31 from "../components/logos/studio31"
 import RecorridoAntigua from "../components/logos/recorridoantigua"
@@ -13,6 +13,13 @@ import Ninja from "../components/logos/ninja"
 export const pageQuery = graphql`
   {
     lulus: file(relativePath: { eq: "lulus.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    barbless: file(relativePath: { eq: "barbless.png" }) {
       sharp: childImageSharp {
         fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
           ...GatsbyImageSharpFluid_withWebp
@@ -47,11 +54,34 @@ export const pageQuery = graphql`
         }
       }
     }
+    walnut: file(relativePath: { eq: "thewalnutbuilding.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    wewantyou: file(relativePath: { eq: "wewantyou.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `
 
 const PortfolioPage = ({ data }) => {
-  const { lulus, barblessPodcast, recorridoAntigua, datastax, donordesk } = data
+  const {
+    lulus,
+    barbless,
+    barblessPodcast,
+    recorridoAntigua,
+    datastax,
+    donordesk,
+    walnut,
+    wewantyou,
+  } = data
 
   return (
     <Layout>
@@ -91,8 +121,8 @@ const PortfolioPage = ({ data }) => {
           <div className="flex flex-wrap align-top w-full my-4 md:my-8">
             <OptimizedImage
               className="w-full md:w-1/2 order-1 md:order-2"
-              fluid={barblessPodcast.sharp.fluid}
-              alt="Barbless Podcast"
+              fluid={barbless.sharp.fluid}
+              alt="Barbless Website"
               fadeIn={true}
               objectFit="contain"
               objectPosition="50% 50%"
@@ -100,10 +130,10 @@ const PortfolioPage = ({ data }) => {
 
             <div className="w-full md:w-1/2 p-4 md:p-16  order-2 md:order-1 md:text-right">
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line md:justify-end">
-                Podcasting
+                Website
               </span>
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
-                Barbless Podcast
+                Barbless
               </h1>
             </div>
           </div>
@@ -111,8 +141,8 @@ const PortfolioPage = ({ data }) => {
           <div className="flex flex-wrap align-top w-full my-4 md:my-8">
             <OptimizedImage
               className="w-full md:w-1/2"
-              fluid={lulus.sharp.fluid}
-              alt="Lulus blog"
+              fluid={barblessPodcast.sharp.fluid}
+              alt="Barbless Podcast"
               fadeIn={true}
               objectFit="contain"
               objectPosition="50% 50%"
@@ -120,10 +150,10 @@ const PortfolioPage = ({ data }) => {
 
             <div className="w-full md:w-1/2 p-4 md:p-16">
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">
-                Blog
+                Podcasting
               </span>
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
-                Lulus
+                Barbless Podcast
               </h1>
             </div>
           </div>
@@ -151,6 +181,46 @@ const PortfolioPage = ({ data }) => {
           <div className="flex flex-wrap align-top w-full my-4 md:my-8">
             <OptimizedImage
               className="w-full md:w-1/2"
+              fluid={lulus.sharp.fluid}
+              alt="Lulus blog"
+              fadeIn={true}
+              objectFit="contain"
+              objectPosition="50% 50%"
+            />
+
+            <div className="w-full md:w-1/2 p-4 md:p-16">
+              <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">
+                Blog
+              </span>
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
+                Lulus
+              </h1>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap align-top w-full my-4 md:my-8">
+            <OptimizedImage
+              className="w-full md:w-1/2 order-1 md:order-2"
+              fluid={wewantyou.sharp.fluid}
+              alt="We Want You"
+              fadeIn={true}
+              objectFit="contain"
+              objectPosition="50% 50%"
+            />
+
+            <div className="w-full md:w-1/2 p-4 md:p-16  order-2 md:order-1 md:text-right">
+              <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line md:justify-end">
+                Aplicación web
+              </span>
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
+                We Want You
+              </h1>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap align-top w-full my-4 md:my-8">
+            <OptimizedImage
+              className="w-full md:w-1/2"
               fluid={recorridoAntigua.sharp.fluid}
               alt="Recorrido Antigua app"
               fadeIn={true}
@@ -164,6 +234,26 @@ const PortfolioPage = ({ data }) => {
               </span>
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
                 Recorrido Antigua
+              </h1>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap align-top w-full my-4 md:my-8">
+            <OptimizedImage
+              className="w-full md:w-1/2 order-1 md:order-2"
+              fluid={walnut.sharp.fluid}
+              alt="The Walnut Building"
+              fadeIn={true}
+              objectFit="contain"
+              objectPosition="50% 50%"
+            />
+
+            <div className="w-full md:w-1/2 p-4 md:p-16  order-2 md:order-1 md:text-right">
+              <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line md:justify-end">
+                Website
+              </span>
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
+                The Walnut Building Website
               </h1>
             </div>
           </div>
@@ -189,9 +279,8 @@ const PortfolioPage = ({ data }) => {
               title="barbless"
             >
               <span className="opacity-0">Barbless.co</span>
-              <Barbless className="text-commet w-20 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" />
+              <Barblesslogo className="text-commet w-20 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" />
             </a>
-            {/* <a href="https://burbankitchen.com"  target="_blank"rel="noreferrer" title="Burban kitchen"><BurbanKitchen className="text-commet w-24 md:w-32 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" /></a> */}
             <a
               href="https://teamninja.com"
               target="_blank"
