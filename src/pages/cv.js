@@ -59,7 +59,7 @@ const CV = ({ data }) => {
                 <strong className="text-white">Dirección:</strong>
               </td>
               <td className="py-2 pl-4">
-                <span className="text-suit">Antigua Guatemala, Sacatepéquez, Guatemala.</span>
+                <span className="text-suit">Antigua Guatemala, Guatemala.</span>
               </td>
             </tr>
             <tr className="align-top">
@@ -75,7 +75,7 @@ const CV = ({ data }) => {
                 <strong className="text-white">Portafolio:</strong>
               </td>
               <td className="py-2 pl-4">
-                <Link to="/" className="text-suit hover:text-white transition-all duration-200 ease-in-out">/portafolio</Link>
+                <Link to="/portafolio" className="text-suit hover:text-white transition-all duration-200 ease-in-out">/portafolio</Link>
               </td>
             </tr>
 
@@ -153,14 +153,16 @@ const CV = ({ data }) => {
 
             <ul className="list-disc ml-4 text-suit">
               <li>
+                <h3 className="font-bold text-gainsboro text-lg leading-tight md:text-xl mt-4">DataStax, Senior Frontend Engineer</h3>
+                <span className="block text-suit text-xs mb-4">Agosto del 2021 - Actualidad, Guatemala</span>
+              </li>
+              <li>
                 <h3 className="font-bold text-gainsboro text-lg leading-tight md:text-xl mt-4">Studio 31, Desarrollador Web</h3>
-                <span className="block text-suit text-xs mb-4">Septiembre del 2017 - Actualidad, Guatemala</span>
-                <p className="text-suit">Desarrollo de Sitios web y aplicaciones web.</p>
+                <span className="block text-suit text-xs mb-4">Septiembre del 2017 - Agosto del 2021, Guatemala</span>
               </li>
               <li>
                 <h3 className="font-bold text-gainsboro text-lg leading-tight md:text-xl mt-4">PC Solutions, Desarrollador</h3>
                 <span className="block text-suit text-xs mb-4">Noviembre del 2015 - Agosto del 2017, Guatemala</span>
-                <p className="text-suit">Desarrollo de aplicaciones windows, para manejo de inventarios y sistemas contables.</p>
               </li>
             </ul>
           </div>

@@ -33,11 +33,25 @@ export const pageQuery = graphql`
         }
       }
     }
+    datastax: file(relativePath: { eq: "datastax.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    donordesk: file(relativePath: { eq: "donordesk.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 540, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `
 
 const PortfolioPage = ({ data }) => {
-  const { lulus, barblessPodcast, recorridoAntigua } = data
+  const { datastax, donordesk, lulus, barblessPodcast, recorridoAntigua } = data
 
   return (
     <Layout>
@@ -54,6 +68,46 @@ const PortfolioPage = ({ data }) => {
       </div>
       <div className="bg-tuna">
         <div className="container flex flex-col px-8 md:px-12">
+          <div className="flex flex-wrap align-top w-full my-4 md:my-8">
+            <OptimizedImage
+              className="w-full md:w-1/2"
+              fluid={datastax.sharp.fluid}
+              alt="DataStax"
+              fadeIn={true}
+              objectFit="contain"
+              objectPosition="50% 50%"
+            />
+
+            <div className="w-full md:w-1/2 p-4 md:p-16">
+              <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line">
+                Website
+              </span>
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
+                DataStax
+              </h1>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap align-top w-full my-4 md:my-8">
+            <OptimizedImage
+              className="w-full md:w-1/2 order-1 md:order-2"
+              fluid={barblessPodcast.sharp.fluid}
+              alt="Barbless Podcast"
+              fadeIn={true}
+              objectFit="contain"
+              objectPosition="50% 50%"
+            />
+
+            <div className="w-full md:w-1/2 p-4 md:p-16  order-2 md:order-1 md:text-right">
+              <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line md:justify-end">
+                Podcasting
+              </span>
+              <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
+                Barbless Podcast
+              </h1>
+            </div>
+          </div>
+
           <div className="flex flex-wrap align-top w-full my-4 md:my-8">
             <OptimizedImage
               className="w-full md:w-1/2"
@@ -77,8 +131,8 @@ const PortfolioPage = ({ data }) => {
           <div className="flex flex-wrap align-top w-full my-4 md:my-8">
             <OptimizedImage
               className="w-full md:w-1/2 order-1 md:order-2"
-              fluid={barblessPodcast.sharp.fluid}
-              alt="Barbless Podcast"
+              fluid={donordesk.sharp.fluid}
+              alt="Donor Desk Website"
               fadeIn={true}
               objectFit="contain"
               objectPosition="50% 50%"
@@ -86,10 +140,10 @@ const PortfolioPage = ({ data }) => {
 
             <div className="w-full md:w-1/2 p-4 md:p-16  order-2 md:order-1 md:text-right">
               <span className="flex items-center font-semibold text-supernova text-sm md:text-base w-line md:justify-end">
-                Podcasting
+                Website
               </span>
               <h1 className="font-bold text-white text-2xl leading-tight md:text-4xl mt-4">
-                Barbless Podcast
+                Donor desk
               </h1>
             </div>
           </div>

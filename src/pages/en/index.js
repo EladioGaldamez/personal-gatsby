@@ -8,29 +8,32 @@ import Barbless from "../../components/logos/barbless"
 import Namecheap from "../../components/logos/namecheap"
 import Studio31 from "../../components/logos/studio31"
 import RecorridoAntigua from "../../components/logos/recorridoantigua"
+import DataStax from "../../components/logos/datastax"
+import BurbanKitchen from "../../components/logos/burbankitchen"
+import DonorDesk from "../../components/logos/donordesk"
 import Ninja from "../../components/logos/ninja"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import RandomIcons from "../../components/randomIcons"
 
 export const pageQuery = graphql`
   {
-    lulus: file(relativePath: { eq: "lulus.png" }) {
-      sharp: childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
     barblessPodcast: file(relativePath: { eq: "barbless-podcast.png" }) {
       sharp: childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(maxHeight: 1280, maxWidth: 720, quality: 100, cropFocus: NORTH) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    recorridoAntigua: file(relativePath: { eq: "recorrido-antigua.png" }) {
+    datastax: file(relativePath: { eq: "datastax.png" }) {
       sharp: childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(maxHeight: 1280, maxWidth: 720, quality: 100, cropFocus: NORTH) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    donordesk: file(relativePath: { eq: "donordesk.png" }) {
+      sharp: childImageSharp {
+        fluid(maxHeight: 1280, maxWidth: 720, quality: 100, cropFocus: NORTH) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
@@ -39,7 +42,7 @@ export const pageQuery = graphql`
 `
 
 const IndexPage = ({ data }) => {
-  const { lulus, barblessPodcast, recorridoAntigua } = data
+  const { datastax, donordesk, barblessPodcast } = data
 
   return (
     <Layout>
@@ -159,6 +162,33 @@ const IndexPage = ({ data }) => {
               <Studio31 className="text-commet w-20 md:w-40 mx-2 md:mx-8 hover:text-white transition-all duration-200 ease-in-out" />
             </a>
             <a
+              href="https://www.datastax.com"
+              target="_blank"
+              rel="noreferrer"
+              title="recorrido antigua"
+            >
+              <span className="opacity-0">DataStax</span>
+              <DataStax className="text-commet w-20 md:w-40 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" />
+            </a>
+            <a
+              href="https://www.burbankitchen.com"
+              target="_blank"
+              rel="noreferrer"
+              title="recorrido antigua"
+            >
+              <span className="opacity-0">Burban Kitchen</span>
+              <BurbanKitchen className="text-commet w-20 md:w-40 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" />
+            </a>
+            <a
+              href="https://donordesk.co/"
+              target="_blank"
+              rel="noreferrer"
+              title="recorrido antigua"
+            >
+              <span className="opacity-0">DonorDesk</span>
+              <DonorDesk className="text-commet w-20 md:w-40 mx-2 md:mx-8 my-4 hover:text-white transition-all duration-200 ease-in-out" />
+            </a>
+            <a
               href="https://recorridoantigua.com"
               target="_blank"
               rel="noreferrer"
@@ -186,8 +216,8 @@ const IndexPage = ({ data }) => {
 
             <OptimizedImage
               className="mt-8 pr-0 md:pr-8 md:mt-16 w-full"
-              fluid={lulus.sharp.fluid}
-              alt="Lulus blog"
+              fluid={datastax.sharp.fluid}
+              alt="DataStax"
               fadeIn={true}
               objectFit="contain"
               objectPosition="50% 50%"
@@ -205,8 +235,8 @@ const IndexPage = ({ data }) => {
             />
             <OptimizedImage
               className="mt-8 pl-0 md:pl-8 md:mt-16 w-full"
-              fluid={recorridoAntigua.sharp.fluid}
-              alt="Recorrido Antigua app"
+              fluid={donordesk.sharp.fluid}
+              alt="DonorDesk Website"
               fadeIn={true}
               objectFit="contain"
               objectPosition="50% 50%"
